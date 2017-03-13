@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="editor.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#txtEditor").Editor();
+			});
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="editor.css" type="text/css" rel="stylesheet"/>
+		<title>Sample|Aman Adhikari</title>
+	</head>
+	<body>
+	<button onclick="myFunction()" id="Submit" class="btn btn-primary ">Submit</button>
+		<div class="container-fluid">
+			<div class="row">
+				<h2 class="demo-text">SELECT FONT, SIZE AND PLAY</h2>
+				<h1 style="display: none;" id="hide"></h1>
+				<p style="font-size: 50px;" id="demo"></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 nopadding">
+							<textarea id="txtEditor"></textarea> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+	function myFunction() {
+		$('.container-fluid').hide();
+		$('#hide').show();
+   var minNumber = 1;
+var maxNumber = 10;
+
+var randomNumber = randomNumberFromRange(minNumber, maxNumber);
+
+function randomNumberFromRange(min,max)
+{
+
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+document.getElementById("demo").innerHTML = randomNumber;
+console.log(randomNumber);
+document.write("YOUR GRADE FROM ONE TO TEN IS :  ");
+document.write(randomNumber);
+
+}
+			
+		
+			
+		</script>
+	</body>
+</html>
